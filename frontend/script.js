@@ -373,6 +373,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 'clochettes': 'clochettes.html',
                 'souffle': 'souffle.html',
                 'indika': 'indika.html',
+                'faubourgdesmers': 'faubourgdesmers.html',
+                'fabriquehistoire': 'fabriquehistoire.html',
+                'queterale': 'queterale.html',
                 // Add other spectacle pages here as they are created
                 // etc.
             };
