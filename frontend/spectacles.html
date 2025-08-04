@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectacles - Le Collectif du Faubourg</title>
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with artistic navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-main">Le Collectif</span>
+                    <span class="logo-sub">du Faubourg</span>
+                </div>
+            </a>
+            
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Spectacles Section -->
+        <section id="spectacles" class="section section-spectacles page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Spectacles</h1>
+                    <div class="section-ornament"></div>
+                </div>
+                
+                <div class="spectacles-grid">
+                    <div class="spectacle-card" data-spectacle="souffle">
+                        <div class="card-image">
+                            <img src="public/sp1_souffle/souffle_main.jpg" alt="Souffle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>Souffle</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Souffle</h3>
+                        <p class="card-description">Concert théâtral</p>
+                    </div>
+                    
+                    <div class="spectacle-card" data-spectacle="clochettes">
+                        <div class="card-image">
+                            <img src="public/sp2_clochettes/clochettes_main.jpg" alt="Les Clochettes dans les pieds" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>Clochettes</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Les Clochettes dans les pieds</h3>
+                        <p class="card-description">Spectacle musical</p>
+                    </div>
+                    
+                    <div class="spectacle-card" data-spectacle="indika">
+                        <div class="card-image">
+                            <img src="public/sp3_indika/indika_main.jpg" alt="Indika" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>Indika</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Indika</h3>
+                        <p class="card-description">Création théâtrale</p>
+                    </div>
+                    
+                    <div class="spectacle-card" data-spectacle="faubourgmers">
+                        <div class="card-image">
+                            <img src="public/sp4_faubourgmers/faubourgmers_main.jpg" alt="Faubourg des Mers" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>Faubourg des Mers</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Faubourg des Mers</h3>
+                        <p class="card-description">Spectacle maritime</p>
+                    </div>
+                    
+                    <div class="spectacle-card" data-spectacle="fabriquehistoire">
+                        <div class="card-image">
+                            <img src="public/sp5_fabriquehistoire/fabrique_main.jpg" alt="La Fabrique à Histoire" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>La Fabrique à Histoire</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">La Fabrique à Histoire</h3>
+                        <p class="card-description">Jeune public</p>
+                    </div>
+                    
+                    <div class="spectacle-card" data-spectacle="queterale">
+                        <div class="card-image">
+                            <img src="public/sp6_queterale/queterale_main.jpg" alt="Quête Rale" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;">
+                                <span>Quête Rale</span>
+                            </div>
+                        </div>
+                        <h3 class="card-title">Quête Rale</h3>
+                        <p class="card-description">Performance artistique</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spectacle Detail Modal -->
+        <div class="spectacle-modal" id="spectacle-modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div class="modal-header">
+                    <h2 class="modal-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-gallery">
+                        <div class="gallery-main">
+                            <img src="" alt="" class="main-image">
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <!-- Thumbnails will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="modal-info">
+                        <div class="modal-description"></div>
+                        <div class="modal-video">
+                            <!-- Video will be added if available -->
+                        </div>
+                        <div class="modal-files">
+                            <!-- PDF and other files will be linked here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+                    <p>Photographies: Samuel Domingo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

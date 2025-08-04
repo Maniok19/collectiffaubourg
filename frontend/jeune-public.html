@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeune Public - Le Collectif du Faubourg</title>
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with artistic navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-main">Le Collectif</span>
+                    <span class="logo-sub">du Faubourg</span>
+                </div>
+            </a>
+            
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Jeune Public Section -->
+        <section id="jeune-public" class="section section-jeune-public page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Jeune Public</h1>
+                    <div class="section-ornament"></div>
+                    <p class="section-subtitle">Des créations pour éveiller l'imaginaire des enfants</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-text">
+                        <p class="lead">Nos spectacles jeune public mêlent théâtre, musique et arts visuels pour créer des expériences inoubliables.</p>
+                        <p>Nous croyons en la capacité des enfants à comprendre et à ressentir des émotions complexes. Nos créations abordent des thèmes universels avec poésie et sensibilité.</p>
+                    </div>
+                </div>
+
+                <!-- Spectacles Jeune Public -->
+                <div class="jeune-public-grid">
+                    <div class="category">
+                        <h3>La Fabrique à Histoire</h3>
+                        <div class="spectacle-card" data-spectacle="fabriquehistoire">
+                            <div class="card-image">
+                                <img src="public/sp5_fabriquehistoire/fabrique_main.jpg" alt="La Fabrique à Histoire" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="image-placeholder" style="display:none;">La Fabrique à Histoire</div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Atelier créatif</h4>
+                                <p class="card-description">Un spectacle interactif où les enfants deviennent les héros de leurs propres histoires.</p>
+                                <div class="card-details">
+                                    <span class="age-range">À partir de 5 ans</span>
+                                    <span class="duration">45 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category">
+                        <h3>Les Clochettes dans les pieds</h3>
+                        <div class="spectacle-card" data-spectacle="clochettes">
+                            <div class="card-image">
+                                <img src="public/sp2_clochettes/clochettes_main.jpg" alt="Les Clochettes dans les pieds" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="image-placeholder" style="display:none;">Clochettes</div>
+                            </div>
+                            <div class="card-content">
+                                <h4 class="card-title">Spectacle musical</h4>
+                                <p class="card-description">Une aventure musicale qui invite les enfants à découvrir les sons et les rythmes.</p>
+                                <div class="card-details">
+                                    <span class="age-range">À partir de 3 ans</span>
+                                    <span class="duration">35 minutes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Approach Section -->
+                <div class="approach-section">
+                    <h3>Notre Approche Pédagogique</h3>
+                    <div class="approach-grid">
+                        <div class="approach-item">
+                            <h4>Participation Active</h4>
+                            <p>Les enfants sont invités à participer, à chanter, à bouger et à interagir avec les artistes.</p>
+                        </div>
+                        <div class="approach-item">
+                            <h4>Respect de l'Intelligence</h4>
+                            <p>Nous ne sous-estimons jamais la capacité des enfants à comprendre des sujets complexes.</p>
+                        </div>
+                        <div class="approach-item">
+                            <h4>Émotions Authentiques</h4>
+                            <p>Nos spectacles explorent toute la gamme des émotions humaines avec sincérité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+                    <p>Photographies: Samuel Domingo</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

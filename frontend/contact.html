@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Le Collectif du Faubourg</title>
+    <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with artistic navigation -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+            </a>
+            
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Contact Section -->
+        <section id="contact" class="section section-contact page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Contact</h1>
+                    <div class="section-ornament"></div>
+                    <p class="section-subtitle">Entrons en contact pour donner vie à vos projets artistiques</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Informations Générales</h3>
+                            <p><strong>Email:</strong> contact@collectifdufaubourg.fr</p>
+                            <p><strong>Téléphone:</strong> +33 (0)2 XX XX XX XX</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Administration</h3>
+                            <p><strong>Marie Dubois</strong></p>
+                            <p>Directrice artistique</p>
+                            <p>marie@collectifdufaubourg.fr</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Programmation</h3>
+                            <p><strong>Pierre Martin</strong></p>
+                            <p>Chargé de diffusion</p>
+                            <p>diffusion@collectifdufaubourg.fr</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Actions Culturelles</h3>
+                            <p><strong>Sophie Leroux</strong></p>
+                            <p>Médiation artistique</p>
+                            <p>mediation@collectifdufaubourg.fr</p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Suivez-nous</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">Facebook</a>
+                                <a href="#" class="social-link">Instagram</a>
+                                <a href="#" class="social-link">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <h3>Envoyez-nous un message</h3>
+                            
+                            <div class="form-group">
+                                <label for="name">Nom *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Sujet *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="programmation">Programmation de spectacles</option>
+                                    <option value="reservation">Réservation / Billetterie</option>
+                                    <option value="scolaire">Actions scolaires</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="presse">Demande presse</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter">
+                                    Je souhaite recevoir la newsletter du Collectif du Faubourg
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-button">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="location-section">
+                    <h3>Notre Siège Social</h3>
+                    <div class="location-info">
+                        <div class="address">
+                            <p><strong>Le Collectif du Faubourg</strong></p>
+                            <p>123 Rue des Arts</p>
+                            <p>44000 Nantes, France</p>
+                        </div>
+                        <div class="location-details">
+                            <p><strong>Accès:</strong> Métro ligne 1, arrêt "Commerce"</p>
+                            <p><strong>Horaires:</strong> Du lundi au vendredi, 9h-17h</p>
+                            <p><em>Sur rendez-vous uniquement</em></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
