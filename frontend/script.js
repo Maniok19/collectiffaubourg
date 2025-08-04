@@ -305,7 +305,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Utility function for smooth reveal animations
     function revealOnScroll() {
-        const reveals = document.querySelectorAll('.spectacle-card, .ensemble-item, .category');
+        // Don't apply reveal animation to spectacle cards on spectacles page
+        const isSpectaclesPage = window.location.pathname.includes('spectacles.html');
+        const selector = isSpectaclesPage ? 
+            '.ensemble-item, .category' : 
+            '.spectacle-card, .ensemble-item, .category';
+            
+        const reveals = document.querySelectorAll(selector);
         
         reveals.forEach(reveal => {
             const windowHeight = window.innerHeight;
@@ -320,12 +326,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', revealOnScroll);
 
-    // Add CSS class for revealed elements
+    // Add CSS class for revealed elements - exclude spectacle cards on spectacles page
     const style = document.createElement('style');
     style.textContent = `
-        .spectacle-card,
         .ensemble-item,
         .category {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        /* Only hide spectacle cards on non-spectacles pages */
+        body:not([data-page="spectacles"]) .spectacle-card {
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.6s ease;

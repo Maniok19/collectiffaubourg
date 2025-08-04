@@ -1894,3 +1894,22 @@ img[onerror] {
         margin: 0 var(--spacing-sm);
     }
 }
+
+/* Remove opacity animation for spectacle cards on spectacles page */
+.page-section .spectacle-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Override the reveal animation specifically for spectacles grid */
+.spectacles-grid .spectacle-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Keep hover effects but remove initial hiding */
+.spectacles-grid .spectacle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
