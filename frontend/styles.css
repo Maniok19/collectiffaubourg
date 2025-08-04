@@ -690,6 +690,56 @@ body {
     color: var(--color-primary);
 }
 
+/* Concept section styles */
+.concept-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+}
+
+.concept-section h2 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.concept-content {
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.concept-content p {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.concept-content strong {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.livret-info {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-top: var(--spacing-md);
+    border-left: 4px solid var(--color-accent);
+}
+
+.livret-info h3 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+}
+
+.livret-info p {
+    margin-bottom: var(--spacing-xs);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-toggle {

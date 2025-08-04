@@ -165,18 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Open modal
-    spectacleCardsWithData.forEach(card => {
-        card.addEventListener('click', function() {
-            const spectacleId = this.dataset.spectacle;
-            const spectacle = spectacleData[spectacleId];
-            
-            if (spectacle) {
-                openSpectacleModal(spectacle);
-            }
-        });
-    });
-
     // Close modal
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
@@ -371,19 +359,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Check if we have a dedicated page for this spectacle
             const spectaclePages = {
                 'clochettes': 'clochettes.html',
+                'souffle': 'souffle.html',
+                'indika': 'indika.html',
                 // Add other spectacle pages here as they are created
-                // 'souffle': 'souffle.html',
-                // 'indika': 'indika.html',
                 // etc.
             };
             
             if (spectaclePages[spectacleId]) {
                 // Navigate to dedicated page
                 window.location.href = spectaclePages[spectacleId];
-            } else if (spectacleData[spectacleId]) {
-                // Open modal for spectacles without dedicated pages
-                openSpectacleModal(spectacleData[spectacleId]);
             }
+            // Supprimez la partie else qui ouvre le modal
         });
     });
 });
