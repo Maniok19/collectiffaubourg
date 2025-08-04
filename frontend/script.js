@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveNavLink();
 
     // Spectacle cards hover effects
-    const spectacleCards = document.querySelectorAll('.spectacle-card');
-    spectacleCards.forEach(card => {
+    const spectacleCardsHover = document.querySelectorAll('.spectacle-card');
+    spectacleCardsHover.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px) rotate(1deg)';
         });
@@ -359,5 +359,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 closeModal();
             }
         }
+    });
+
+    // Spectacle navigation - add click handlers for spectacle cards
+    const spectacleCards = document.querySelectorAll('.spectacle-card[data-spectacle]');
+    spectacleCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const spectacleId = this.dataset.spectacle;
+            
+            // Check if we have a dedicated page for this spectacle
+            const spectaclePages = {
+                'clochettes': 'clochettes.html',
+                // Add other spectacle pages here as they are created
+                // 'souffle': 'souffle.html',
+                // 'indika': 'indika.html',
+                // etc.
+            };
+            
+            if (spectaclePages[spectacleId]) {
+                // Navigate to dedicated page
+                window.location.href = spectaclePages[spectacleId];
+            } else if (spectacleData[spectacleId]) {
+                // Open modal for spectacles without dedicated pages
+                openSpectacleModal(spectacleData[spectacleId]);
+            }
+        });
     });
 });
