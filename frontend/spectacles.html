@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="spectacles">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -20,7 +21,7 @@
                 </div>
             </a>
             
-            <nav class="nav">
+            <nav class="nav" aria-label="Navigation principale">
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -40,7 +41,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Spectacles Section -->
         <section id="spectacles" class="section section-spectacles page-section">
             <div class="container">
@@ -50,7 +51,7 @@
                 </div>
                 
                 <div class="spectacles-grid">
-                    <div class="spectacle-card" data-spectacle="souffle">
+                    <div class="spectacle-card" data-spectacle="souffle" role="button" tabindex="0" aria-label="Voir Souffle">
                         <div class="card-image">
                             <img src="public/sp1_souffle/souffle_main.jpg" alt="Souffle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -61,7 +62,7 @@
                         <p class="card-description">Concert théâtral</p>
                     </div>
                     
-                    <div class="spectacle-card" data-spectacle="clochettes">
+                    <div class="spectacle-card" data-spectacle="clochettes" role="button" tabindex="0" aria-label="Voir Les Clochettes dans les pieds">
                         <div class="card-image">
                             <img src="public/sp2_clochettes/clochettes_main.jpg" alt="Les Clochettes dans les pieds" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -72,7 +73,7 @@
                         <p class="card-description">Spectacle musical</p>
                     </div>
                     
-                    <div class="spectacle-card" data-spectacle="indika">
+                    <div class="spectacle-card" data-spectacle="indika" role="button" tabindex="0" aria-label="Voir Indika">
                         <div class="card-image">
                             <img src="public/sp3_indika/indika_main.jpg" alt="Indika" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -83,7 +84,7 @@
                         <p class="card-description">Création théâtrale</p>
                     </div>
                     
-                    <div class="spectacle-card" data-spectacle="faubourgdesmers">
+                    <div class="spectacle-card" data-spectacle="faubourgdesmers" role="button" tabindex="0" aria-label="Voir Faubourg des Mers">
                         <div class="card-image">
                             <img src="public/sp4_faubourgmers/faubourgmers_main.jpg" alt="Faubourg des Mers" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -94,7 +95,7 @@
                         <p class="card-description">Spectacle maritime</p>
                     </div>
                     
-                    <div class="spectacle-card" data-spectacle="fabriquehistoire">
+                    <div class="spectacle-card" data-spectacle="fabriquehistoire" role="button" tabindex="0" aria-label="Voir La Fabrique à Histoire">
                         <div class="card-image">
                             <img src="public/sp5_fabriquehistoire/fabrique_main.jpg" alt="La Fabrique à Histoire" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -105,7 +106,7 @@
                         <p class="card-description">Jeune public</p>
                     </div>
                     
-                    <div class="spectacle-card" data-spectacle="queterale">
+                    <div class="spectacle-card" data-spectacle="queterale" role="button" tabindex="0" aria-label="Voir Quête Rale">
                         <div class="card-image">
                             <img src="public/sp6_queterale/queterale_main.jpg" alt="Quête Rale" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder" style="display:none;">
@@ -151,17 +152,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
-                </div>
-                <div class="footer-text">
-                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
-                </div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Le Collectif du Faubourg">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

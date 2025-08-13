@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="ensemble">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -36,7 +37,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Événements Ponctuels Section -->
         <section id="evenements-ponctuels" class="section section-evenements page-section">
             <div class="container">
@@ -184,10 +185,10 @@
         </section>
 
         <!-- Ensemble Section -->
-        <section id="ensemble" class="section section-ensemble page-section">
+        <section id="ensemble" class="section section-ensemble page-section" aria-labelledby="ensemble-titre">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">L'Ensemble</h2>
+                    <h2 id="ensemble-titre" class="section-title">Le Collectif</h2>
                     <div class="section-ornament"></div>
                     <p class="section-subtitle">Les artistes qui donnent vie au Collectif du Faubourg</p>
                 </div>

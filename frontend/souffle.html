@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="souffle">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -40,7 +41,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Breadcrumb -->
         <section class="breadcrumb-section">
             <div class="container">
@@ -70,7 +71,7 @@
             <div class="container">
                 <div class="content-grid">
                     <!-- Image Gallery -->
-                    <div class="gallery-section">
+                    <div class="gallery-section" aria-label="Galerie d’images Souffle">
                         <div class="main-image-container">
                             <img src="public/sp1_souffle/souffle_main.jpg" alt="Souffle" class="main-spectacle-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="image-placeholder main-placeholder" style="display:none;">

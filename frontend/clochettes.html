@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="clochettes">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -40,7 +41,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Breadcrumb -->
         <section class="breadcrumb-section">
             <div class="container">
@@ -128,8 +129,8 @@
                 </div>
 
                 <!-- Nouvelle création liée -->
-                <section class="creation-highlight">
-                    <div class="creation-inner">
+                <section class="creation-highlight" aria-labelledby="creation-liee-titre">
+                    <div class="creation-inner" id="creation-liee-titre">
                         <h2 class="creation-title">
                             Je parle la bouche pleine! <span class="alt-sep">|</span>
                             <span class="creation-alt">La voix de la terre</span>

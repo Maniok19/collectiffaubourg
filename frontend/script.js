@@ -25,16 +25,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateActiveNavLink() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-link');
-        
         navLinks.forEach(link => {
             link.classList.remove('active');
+            link.removeAttribute('aria-current');
             const linkHref = link.getAttribute('href');
-            if (linkHref === currentPage || 
-                (currentPage === 'index.html' && linkHref === 'index.html')) {
+            if (linkHref === currentPage || (currentPage === 'index.html' && linkHref === 'index.html')) {
                 link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
             }
         });
     }
+
+    // Toggle aria-expanded on mobile
+    if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+        });
+    }
+
+    // Retirer tentative de parallax sur pseudo-éléments (inefficace)
+    // (suppression du bloc décoratif précédent)
 
     // Call on page load
     updateActiveNavLink();
@@ -109,19 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
     heroWords.forEach((word, index) => {
         word.style.animationDelay = `${index * 0.3}s`;
         word.style.animation = 'fadeInUp 0.8s ease forwards';
-    });
-
-    // Parallax effect for decorative elements (subtle)
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
-        const decorativeElements = document.querySelectorAll('.section::before, .section::after');
-        decorativeElements.forEach(element => {
-            if (element) {
-                element.style.transform = `translateY(${rate}px)`;
-            }
-        });
     });
 
     // Spectacle data
@@ -386,5 +385,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             // Supprimez la partie else qui ouvre le modal
         });
+    });
+
+    // Amélioration focus clavier sur cartes (Enter déclenche)
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Enter' && e.target.classList.contains('spectacle-card') && e.target.dataset.spectacle) {
+            e.target.click();
+        }
     });
 });

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="contact">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -36,7 +37,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Contact Section -->
         <section id="contact" class="section section-contact page-section">
             <div class="container">
@@ -88,7 +89,7 @@
 
                     <!-- Contact Form -->
                     <div class="contact-form-container">
-                        <form class="contact-form">
+                        <form class="contact-form" novalidate aria-label="Formulaire de contact">
                             <h3>Envoyez-nous un message</h3>
                             
                             <div class="form-group">

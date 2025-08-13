@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="index">
+    <a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+            <a href="index.html" class="logo" aria-label="Accueil Le Collectif du Faubourg">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Le Collectif du Faubourg" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-main">Le Collectif</span>
+                    <span class="logo-sub">du Faubourg</span>
+                </div>
             </a>
-            
-            <nav class="nav">
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <nav class="nav" aria-label="Navigation principale">
+                <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
                 </button>
-                
                 <ul class="nav-list">
-                    <li><a href="#faubourg" class="nav-link">Le Faubourg</a></li>
+                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
                     <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
                     <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
                     <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
@@ -56,7 +57,7 @@
     </section>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Le Faubourg Section -->
         <section id="faubourg" class="section section-faubourg">
             <div class="container">
@@ -111,17 +112,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
-                </div>
-                <div class="footer-text">
-                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
-                </div>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Le Collectif du Faubourg">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

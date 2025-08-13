@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page="agenda">
+<a href="#main-content" class="skip-link">Aller au contenu</a>
     <!-- Header with artistic navigation -->
     <header class="header">
         <div class="container">
@@ -36,7 +37,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="main">
+    <main class="main" id="main-content" tabindex="-1">
         <!-- Agenda Section -->
         <section id="agenda" class="section section-agenda page-section">
             <div class="container">
@@ -50,7 +51,7 @@
                 <div class="events-section">
                     <h3>Prochaines Représentations</h3>
                     <div class="events-grid">
-                        <div class="event-card highlight">
+                        <div class="event-card highlight" role="article" aria-label="Prochain événement">
                             <div class="event-date">
                                 <span class="month">MAR</span>
                                 <span class="day">15</span>
