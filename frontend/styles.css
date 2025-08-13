@@ -1087,3 +1087,36 @@ body {
     top: 8px;
 }
 .nav .logo-text { pointer-events:none; }
+
+/* FULL WIDTH VERSION (une seule colonne) */
+.section-faubourg .container {
+  max-width: 100%;
+  padding-left: clamp(1rem,3vw,3rem);
+  padding-right: clamp(1rem,3vw,3rem);
+}
+
+.section-faubourg .content-grid {
+  display: block;
+}
+
+.section-faubourg .content-text {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-faubourg .content-text p,
+.faubourg-story {
+  max-width: 100%;
+}
+
+/* Désactivation des multicolonnes internes */
+.faubourg-story {
+  column-count: 1 !important;
+  column-gap: 0 !important;
+}
+
+/* Nettoyage styles image supprimée */
+.section-faubourg .content-visual,
+.section-faubourg .content-visual .content-image {
+  display: none !important;
+}
