@@ -10,144 +10,128 @@
 </head>
 <body data-page="spectacles">
 <a href="#main-content" class="skip-link">Aller au contenu</a>
-    <!-- Header with artistic navigation -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
-            </a>
-            
-            <nav class="nav" aria-label="Navigation principale">
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
-                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
-                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
-                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
-                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+        </a>
+        <nav class="nav" aria-label="Navigation principale">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main class="main" id="main-content" tabindex="-1">
-        <!-- Spectacles Section -->
-        <section id="spectacles" class="section section-spectacles page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h1 class="section-title">Spectacles</h1>
-                    <div class="section-ornament"></div>
-                </div>
-                
+<main class="main" id="main-content" tabindex="-1">
+    <section id="spectacles" class="section section-spectacles page-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Spectacles</h1>
+                <div class="section-ornament"></div>
+            </div>
+
+            <!-- Catégorie Tout public -->
+            <div class="spectacles-category" aria-labelledby="heading-tout-public">
+                <h2 id="heading-tout-public" class="subcategory-title">Tout public</h2>
                 <div class="spectacles-grid">
                     <div class="spectacle-card" data-spectacle="souffle" role="button" tabindex="0" aria-label="Voir Souffle">
                         <div class="card-image">
                             <img src="public/sp1_souffle/souffle_main.jpg" alt="Souffle" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>Souffle</span>
-                            </div>
+                            <div class="image-placeholder" style="display:none;"><span>Souffle</span></div>
                         </div>
                         <h3 class="card-title">Souffle</h3>
                         <p class="card-description">Concert théâtral</p>
                     </div>
-                    
-                    <div class="spectacle-card" data-spectacle="clochettes" role="button" tabindex="0" aria-label="Voir Les Clochettes dans les pieds">
-                        <div class="card-image">
-                            <img src="public/sp2_clochettes/clochettes_main.jpg" alt="Les Clochettes dans les pieds" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>Clochettes</span>
-                            </div>
-                        </div>
-                        <h3 class="card-title">Les Clochettes dans les pieds</h3>
-                        <p class="card-description">Spectacle musical</p>
-                    </div>
-                    
+
                     <div class="spectacle-card" data-spectacle="indika" role="button" tabindex="0" aria-label="Voir Indika">
                         <div class="card-image">
                             <img src="public/sp3_indika/indika_main.jpg" alt="Indika" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>Indika</span>
-                            </div>
+                            <div class="image-placeholder" style="display:none;"><span>Indika</span></div>
                         </div>
                         <h3 class="card-title">Indika</h3>
                         <p class="card-description">Création théâtrale</p>
                     </div>
-                    
+
                     <div class="spectacle-card" data-spectacle="faubourgdesmers" role="button" tabindex="0" aria-label="Voir Faubourg des Mers">
                         <div class="card-image">
                             <img src="public/sp4_faubourgmers/faubourgmers_main.jpg" alt="Faubourg des Mers" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>Faubourg des Mers</span>
-                            </div>
+                            <div class="image-placeholder" style="display:none;"><span>Faubourg des Mers</span></div>
                         </div>
                         <h3 class="card-title">Faubourg des Mers</h3>
                         <p class="card-description">Spectacle maritime</p>
                     </div>
-                    
-                    <div class="spectacle-card" data-spectacle="fabriquehistoire" role="button" tabindex="0" aria-label="Voir La Fabrique à Histoire">
-                        <div class="card-image">
-                            <img src="public/sp5_fabriquehistoire/fabrique_main.jpg" alt="La Fabrique à Histoire" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>La Fabrique à Histoire</span>
-                            </div>
-                        </div>
-                        <h3 class="card-title">La Fabrique à Histoire</h3>
-                        <p class="card-description">Jeune public</p>
-                    </div>
-                    
+
                     <div class="spectacle-card" data-spectacle="queterale" role="button" tabindex="0" aria-label="Voir Quête Rale">
                         <div class="card-image">
                             <img src="public/sp6_queterale/queterale_main.jpg" alt="Quête Rale" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder" style="display:none;">
-                                <span>Quête Rale</span>
-                            </div>
+                            <div class="image-placeholder" style="display:none;"><span>Quête Rale</span></div>
                         </div>
                         <h3 class="card-title">Quête Rale</h3>
                         <p class="card-description">Performance artistique</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Spectacle Detail Modal -->
-        <div class="spectacle-modal" id="spectacle-modal">
-            <div class="modal-content">
-                <button class="modal-close">&times;</button>
-                <div class="modal-header">
-                    <h2 class="modal-title"></h2>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-gallery">
-                        <div class="gallery-main">
-                            <img src="" alt="" class="main-image">
+            <!-- Catégorie Jeune public -->
+            <div class="spectacles-category" aria-labelledby="heading-jeune-public">
+                <h2 id="heading-jeune-public" class="subcategory-title">Jeune public</h2>
+                <div class="spectacles-grid">
+                    <div class="spectacle-card" data-spectacle="clochettes" role="button" tabindex="0" aria-label="Voir Les Clochettes dans les pieds">
+                        <div class="card-image">
+                            <img src="public/sp2_clochettes/clochettes_main.jpg" alt="Les Clochettes dans les pieds" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;"><span>Clochettes</span></div>
                         </div>
-                        <div class="gallery-thumbnails">
-                            <!-- Thumbnails will be populated by JavaScript -->
-                        </div>
+                        <h3 class="card-title">Les Clochettes dans les pieds</h3>
+                        <p class="card-description">Spectacle musical</p>
                     </div>
-                    <div class="modal-info">
-                        <div class="modal-description"></div>
-                        <div class="modal-video">
-                            <!-- Video will be added if available -->
+
+                    <div class="spectacle-card" data-spectacle="fabriquehistoire" role="button" tabindex="0" aria-label="Voir La Fabrique à Histoire">
+                        <div class="card-image">
+                            <img src="public/sp5_fabriquehistoire/fabrique_main.jpg" alt="La Fabrique à Histoire" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder" style="display:none;"><span>La Fabrique à Histoire</span></div>
                         </div>
-                        <div class="modal-files">
-                            <!-- PDF and other files will be linked here -->
-                        </div>
+                        <h3 class="card-title">La Fabrique à Histoire</h3>
+                        <p class="card-description">Jeune public</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
+        </div>
+    </section>
+
+    <div class="spectacle-modal" id="spectacle-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery">
+                    <div class="gallery-main">
+                        <img src="" alt="" class="main-image">
+                    </div>
+                    <div class="gallery-thumbnails"></div>
+                </div>
+                <div class="modal-info">
+                    <div class="modal-description"></div>
+                    <div class="modal-video"></div>
+                    <div class="modal-files"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
@@ -160,6 +144,6 @@
     </div>
 </footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
