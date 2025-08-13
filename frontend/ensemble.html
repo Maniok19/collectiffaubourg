@@ -10,278 +10,282 @@
 </head>
 <body data-page="ensemble">
 <a href="#main-content" class="skip-link">Aller au contenu</a>
-    <!-- Header with artistic navigation -->
-    <header class="header">
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+        </a>
+        <nav class="nav">
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="main" id="main-content" tabindex="-1">
+    <!-- Événements Ponctuels Section -->
+    <section id="evenements-ponctuels" class="section section-evenements page-section">
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
-            </a>
-            
-            <nav class="nav">
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
-                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
-                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
-                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
-                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main" id="main-content" tabindex="-1">
-        <!-- Événements Ponctuels Section -->
-        <section id="evenements-ponctuels" class="section section-evenements page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Événements Ponctuels</h2>
-                    <div class="section-ornament"></div>
-                    <p class="section-subtitle">Nos créations et participations exceptionnelles</p>
-                </div>
-                
-                <div class="evenements-grid">
-                    <div class="evenement-item">
-                        <div class="evenement-date">
-                            <span class="date-day">15</span>
-                            <span class="date-month">Mars</span>
-                            <span class="date-year">2025</span>
-                        </div>
-                        <div class="evenement-content">
-                            <h3>Festival de Théâtre de Rue</h3>
-                            <p class="evenement-lieu">Place du Marché, Centre-ville</p>
-                            <p class="evenement-description">Performance interactive avec le public autour des contes traditionnels revisités.</p>
-                        </div>
-                    </div>
-
-                    <div class="evenement-item">
-                        <div class="evenement-date">
-                            <span class="date-day">22</span>
-                            <span class="date-month">Avril</span>
-                            <span class="date-year">2025</span>
-                        </div>
-                        <div class="evenement-content">
-                            <h3>Nuit des Musées</h3>
-                            <p class="evenement-lieu">Musée d'Art Contemporain</p>
-                            <p class="evenement-description">Création spéciale mêlant théâtre et arts visuels en dialogue avec les œuvres exposées.</p>
-                        </div>
-                    </div>
-
-                    <div class="evenement-item">
-                        <div class="evenement-date">
-                            <span class="date-day">10</span>
-                            <span class="date-month">Juin</span>
-                            <span class="date-year">2025</span>
-                        </div>
-                        <div class="evenement-content">
-                            <h3>Fête de la Musique</h3>
-                            <p class="evenement-lieu">Parc Municipal</p>
-                            <p class="evenement-description">Concert-spectacle en plein air avec participation du public et des musiciens locaux.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">Événements Ponctuels</h2>
+                <div class="section-ornament"></div>
+                <p class="section-subtitle">Nos créations et participations exceptionnelles</p>
             </div>
-        </section>
-
-        <!-- Affiches Section -->
-        <section id="affiches" class="section section-affiches page-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Affiches</h2>
-                    <div class="section-ornament"></div>
-                    <p class="section-subtitle">L'univers visuel de nos créations</p>
-                </div>
-                
-                <div class="affiches-gallery">
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche1.jpg" alt="Affiche spectacle 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Les Contes du Faubourg</h3>
-                            <p>Spectacle tout public - 2024</p>
-                        </div>
+            <div class="evenements-grid">
+                <div class="evenement-item">
+                    <div class="evenement-date">
+                        <span class="date-day">15</span><span class="date-month">Mars</span><span class="date-year">2025</span>
                     </div>
-                    
-                    <!-- Nouvelle affiche (PDF) -->
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">
-                                <img src="public/affiches/affiche-printemps.jpg" alt="Affiche Printemps du Faubourg (PDF)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="affiche-placeholder" style="display:none; align-items:center; justify-content:center; font-size:2rem;">📄</div>
-                            </a>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Printemps du Faubourg</h3>
-                            <p>Dossier / Affiche PDF</p>
-                            <p><a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">Ouvrir le PDF</a></p>
-                        </div>
-                    </div>
-                    
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche2.jpg" alt="Affiche spectacle 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Rêves d'Enfance</h3>
-                            <p>Spectacle jeune public - 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche3.jpg" alt="Affiche spectacle 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Musiques de Traverse</h3>
-                            <p>Concert-spectacle - 2023</p>
-                        </div>
-                    </div>
-
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche4.jpg" alt="Affiche spectacle 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Théâtre de Rue</h3>
-                            <p>Performance urbaine - 2023</p>
-                        </div>
-                    </div>
-
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche5.jpg" alt="Affiche spectacle 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Danses Contemporaines</h3>
-                            <p>Création chorégraphique - 2023</p>
-                        </div>
-                    </div>
-
-                    <div class="affiche-item">
-                        <div class="affiche-image">
-                            <img src="public/affiches/affiche6.jpg" alt="Affiche spectacle 6" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="affiche-placeholder" style="display:none;">🎭</div>
-                        </div>
-                        <div class="affiche-info">
-                            <h3>Festival d'Été</h3>
-                            <p>Événement collectif - 2022</p>
-                        </div>
+                    <div class="evenement-content">
+                        <h3>Festival de Théâtre de Rue</h3>
+                        <p class="evenement-lieu">Place du Marché, Centre-ville</p>
+                        <p class="evenement-description">Performance interactive avec le public autour des contes traditionnels revisités.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Ensemble Section -->
-        <section id="ensemble" class="section section-ensemble page-section" aria-labelledby="ensemble-titre">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="ensemble-titre" class="section-title">Le Collectif</h2>
-                    <div class="section-ornament"></div>
-                    <p class="section-subtitle">Les artistes qui donnent vie au Collectif du Faubourg</p>
-                </div>
-                
-                <!-- Team Grid -->
-                <div class="ensemble-grid">
-                    <div class="ensemble-item">
-                        <div class="member-photo">
-                            <img src="public/ensemble/membre1.jpg" alt="Membre de l'ensemble" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="photo-placeholder" style="display:none;">👤</div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">Claude Francois</h3>
-                            <p class="member-role">Chanteur</p>
-                            <p class="member-description">Passionnée </p>
-                        </div>
+                <div class="evenement-item">
+                    <div class="evenement-date">
+                        <span class="date-day">22</span><span class="date-month">Avril</span><span class="date-year">2025</span>
                     </div>
-
-                    <div class="ensemble-item">
-                        <div class="member-photo">
-                            <img src="public/ensemble/membre2.jpg" alt="Membre de l'ensemble" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="photo-placeholder" style="display:none;">👤</div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">Claude Francois</h3>
-                            <p class="member-role">Chanteur</p>
-                            <p class="member-description">Passionnée </p>
-                        </div>
-                    </div>
-
-                    <div class="ensemble-item">
-                        <div class="member-photo">
-                            <img src="public/ensemble/membre3.jpg" alt="Membre de l'ensemble" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="photo-placeholder" style="display:none;">👤</div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">Claude Francois</h3>
-                            <p class="member-role">Chanteur</p>
-                            <p class="member-description">Passionnée </p>
-                        </div>
-                    </div>
-
-                    <div class="ensemble-item">
-                        <div class="member-photo">
-                            <img src="public/ensemble/membre4.jpg" alt="Membre de l'ensemble" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                            <div class="photo-placeholder" style="display:none;">👤</div>
-                        </div>
-                        <div class="member-info">
-                            <h3 class="member-name">Claude Francois</h3>
-                            <p class="member-role">Chanteur</p>
-                            <p class="member-description">Passionnée </p>
-                        </div>
+                    <div class="evenement-content">
+                        <h3>Nuit des Musées</h3>
+                        <p class="evenement-lieu">Musée d'Art Contemporain</p>
+                        <p class="evenement-description">Création spéciale mêlant théâtre et arts visuels en dialogue avec les œuvres exposées.</p>
                     </div>
                 </div>
-
-                <!-- Collaboration Section -->
-                <div class="collaboration-section">
-                    <h3>Collaborations Artistiques</h3>
-                    <p>Le Collectif du Faubourg s'enrichit régulièrement de nouvelles collaborations avec des artistes locaux et nationaux, créant un réseau artistique dynamique et créatif.</p>
-                    
-                    <div class="values-grid">
-                        <div class="value-item">
-                            <h4>Créativité Collective</h4>
-                            <p>Chaque création naît d'un processus collaboratif où chaque artiste apporte sa vision et son expertise.</p>
-                        </div>
-                        <div class="value-item">
-                            <h4>Transmission</h4>
-                            <p>Nous attachons une grande importance à la transmission de nos savoir-faire aux nouvelles générations.</p>
-                        </div>
-                        <div class="value-item">
-                            <h4>Innovation</h4>
-                            <p>Nous explorons constamment de nouvelles formes d'expression artistique et de narration.</p>
-                        </div>
+                <div class="evenement-item">
+                    <div class="evenement-date">
+                        <span class="date-day">10</span><span class="date-month">Juin</span><span class="date-year">2025</span>
                     </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
-                </div>
-                <div class="footer-text">
-                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+                    <div class="evenement-content">
+                        <h3>Fête de la Musique</h3>
+                        <p class="evenement-lieu">Parc Municipal</p>
+                        <p class="evenement-description">Concert-spectacle en plein air avec participation du public et des musiciens locaux.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Affiches Section -->
+    <section id="affiches" class="section section-affiches page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Affiches</h2>
+                <div class="section-ornament"></div>
+                <p class="section-subtitle">L'univers visuel de nos créations</p>
+            </div>
+            <div class="affiches-gallery">
+                <div class="affiche-item">
+                    <div class="affiche-image">
+                        <a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">
+                            <img src="public/affiches/affiche-printemps.jpg" alt="Affiche Printemps du Faubourg (PDF)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="affiche-placeholder" style="display:none; align-items:center; justify-content:center; font-size:2rem;">📄</div>
+                        </a>
+                    </div>
+                    <div class="affiche-info">
+                        <h3>Printemps du Faubourg</h3>
+                        <p>Dossier / Affiche PDF</p>
+                        <p><a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">Ouvrir le PDF</a></p>
+                    </div>
+                    <details class="pdf-preview-wrapper">
+                        <summary>Prévisualiser l'affiche</summary>
+                        <div class="pdf-preview" role="region" aria-label="Prévisualisation PDF Printemps du Faubourg">
+                            <iframe src="public/AFFICHE%20Printemps%20du%20Faubourg.pdf#zoom=page-width&scrollbar=0&toolbar=0&navpanes=0" title="Affiche Printemps du Faubourg (prévisualisation)" loading="lazy"></iframe>
+                            <div class="pdf-fallback">
+                                Si le PDF ne s'affiche pas,
+                                <a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">cliquez ici pour le télécharger</a>.
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ensemble Section -->
+    <section id="ensemble" class="section section-ensemble page-section" aria-labelledby="ensemble-titre">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="ensemble-titre" class="section-title">Le Collectif</h2>
+                <div class="section-ornament"></div>
+                <p class="section-subtitle">Les artistes qui donnent vie au Collectif du Faubourg</p>
+            </div>
+
+            <div class="ensemble-grid">
+                <!-- Indiana Améziane -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/indiana.jpg" alt="Indiana Améziane" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">IA</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Indiana Améziane</h3>
+                        <p class="member-role">Comédienne – Musicienne</p>
+                        <p class="member-description">Voix, Guembri, Percussions & Loops (Souffle / Indika)</p>
+                    </div>
+                </div>
+
+                <!-- Amélie Etchegaray -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/amelie.jpg" alt="Amélie Etchegaray" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">AE</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Amélie Etchegaray</h3>
+                        <p class="member-role">Musicienne – Régie Technique</p>
+                        <p class="member-description">Accordéon, Chant, Flûte, Percussions, Clochettes</p>
+                    </div>
+                </div>
+
+                <!-- Lucie Botiveau -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/lucie.jpg" alt="Lucie Botiveau" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">LB</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Lucie Botiveau</h3>
+                        <p class="member-role">Musicienne</p>
+                        <p class="member-description">Accordéon, Chant, Cajón, Clochettes (Clochettes)</p>
+                    </div>
+                </div>
+
+                <!-- Véronique Renard -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/veronique.jpg" alt="Véronique Renard" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">VR</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Véronique Renard</h3>
+                        <p class="member-role">Musicienne</p>
+                        <p class="member-description">Accordéon & Chant (Clochettes / Faubourg des Mers)</p>
+                    </div>
+                </div>
+
+                <!-- Olivier Clément -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/olivier.jpg" alt="Olivier Clément" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">OC</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Olivier Clément</h3>
+                        <p class="member-role">Artiste pluridisciplinaire</p>
+                        <p class="member-description">Clown, Didgeridoo, Jonglerie & Équilibre (La Quête du Râle)</p>
+                    </div>
+                </div>
+
+                <!-- Patrice Gelin -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/patrice.jpg" alt="Patrice Gelin" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">PG</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Patrice Gelin</h3>
+                        <p class="member-role">Jeu & Musique</p>
+                        <p class="member-description">Équipage Faubourg des Mers</p>
+                    </div>
+                </div>
+
+                <!-- Sandra Racodon -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/sandra.jpg" alt="Sandra Racodon" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">SR</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sandra Racodon</h3>
+                        <p class="member-role">Jeu & Coordination</p>
+                        <p class="member-description">Faubourg des Mers</p>
+                    </div>
+                </div>
+
+                <!-- Maxime Bernery -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/maxime.jpg" alt="Maxime Bernery" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">MB</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Maxime Bernery</h3>
+                        <p class="member-role">Participation artistique</p>
+                        <p class="member-description">Faubourg des Mers</p>
+                    </div>
+                </div>
+
+                <!-- Yann Magnan -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/yann.jpg" alt="Yann Magnan" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">YM</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Yann Magnan</h3>
+                        <p class="member-role">Technicien Son</p>
+                        <p class="member-description">Clochettes – Support technique</p>
+                    </div>
+                </div>
+
+                <!-- Agnès Dauban -->
+                <div class="ensemble-item">
+                    <div class="member-photo">
+                        <img src="public/ensemble/agnes.jpg" alt="Agnès Dauban" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="photo-placeholder" style="display:none;">AD</div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Agnès Dauban</h3>
+                        <p class="member-role">Autrice – Récit</p>
+                        <p class="member-description">Collectage & narration (La voix de la terre)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collaboration-section">
+                <h3>Collaborations Artistiques</h3>
+                <p>Le Collectif du Faubourg s'enrichit de collaborations : illustrateurs, auteurs, régisseurs et artistes invités selon les projets.</p>
+                <div class="values-grid">
+                    <div class="value-item">
+                        <h4>Créativité Collective</h4>
+                        <p>Processus partagé et expérimental au cœur des projets.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Transmission</h4>
+                        <p>Actions culturelles & jeunes publics intégrées aux créations.</p>
+                    </div>
+                    <div class="value-item">
+                        <h4>Innovation</h4>
+                        <p>Hybridations des formes : musique, clown, narration, objets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
