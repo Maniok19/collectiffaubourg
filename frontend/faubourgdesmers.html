@@ -3,12 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faubourg des Mers</title>
+    <title>Faubourg des Mers - Le Collectif du Faubourg</title>
+    <meta name="description" content="Faubourg des Mers - Manège à pédale. Musique, manipulation d’objets et facéties. Baleine arc-en-ciel, dauphin solaire, hippocampe... Embarquez pour un voyage marin poétique et ludique.">
     <link rel="icon" type="image/x-icon" href="public/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1 class="section-title">Faubourg des Mers</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo" class="logo-image">
+            </a>
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Le Faubourg</a></li>
+                    <li><a href="spectacles.html" class="nav-link">Spectacles</a></li>
+                    <li><a href="jeune-public.html" class="nav-link">Jeune Public</a></li>
+                    <li><a href="ensemble.html" class="nav-link">Ensemble</a></li>
+                    <li><a href="agenda.html" class="nav-link">Agenda</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="main">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav class="breadcrumb">
+                    <a href="index.html">Accueil</a>
+                    <span class="breadcrumb-separator">→</span>
+                    <a href="spectacles.html">Spectacles</a>
+                    <span class="breadcrumb-separator">→</span>
+                    <span class="current">Faubourg des Mers</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Hero -->
+        <section class="spectacle-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="spectacle-title">Faubourg des Mers</h1>
+                    <p class="spectacle-subtitle">Manège à pédale • Musique • Manipulation d’objets • Facéties</p>
+                    <div class="hero-ornament"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="spectacle-content">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Galerie -->
+                    <div class="gallery-section">
+                        <div class="main-image-container">
+                            <img src="public/spx_faubourgdesmers/faubourgdesmers_main.jpg"
+                                 alt="Faubourg des Mers"
+                                 class="main-spectacle-image"
+                                 loading="lazy"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder main-placeholder" style="display:none;">
+                                <span>Faubourg des Mers</span>
+                            </div>
+                        </div>
+                        <div class="gallery-thumbnails">
+                            <div class="thumbnail-placeholder">
+                                <span>Galerie photos à venir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Infos -->
+                    <div class="spectacle-info">
+                        <div class="description-section">
+                            <h2>Au Faubourg des Mers</h2>
+                            <div class="description-content">
+                                <p><strong>Manège à pédale</strong></p>
+                                <p><em>Musique – Manipulation d’objets – Facéties en tout genre</em></p>
+                                <p>Baleine arc en ciel, dauphin solaire et hippocampe, le Faubourg des Mers embarque quatre passagers pour un petit tour au fil des flots d'humeur et d'humour d'un capitaine loufoque et d'une sirène désaccordée...</p>
+                                <p>L'ambiance de chaque voyage se dessine en fonction de l'âge et de la sensibilité du public accueilli à bord.</p>
+                                <p><strong>Distribution :</strong><br>
+                                Une escorte de créatures marines œuvre autour du manège, les duos se construisent en fonction des carnets de bord de chacun.</p>
+                                <p><strong>Équipage principal :</strong><br>
+                                Amélie Etchegaray, Patrice Gelin, Véronique Renard, Lucie Botiveau, Sandra Racodon</p>
+                                <p><strong>Et parfois :</strong><br>
+                                Olivier Clément, Maxime Bernery, Indiana Améziane</p>
+                            </div>
+                        </div>
+
+                        <div class="technical-info">
+                            <h3>Informations techniques</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <strong>Genre :</strong><span>Manège à pédale artistique</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Public :</strong><span>Tout public</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Capacité :</strong><span>4 passagers par tour</span>
+                                </div>
+                                <div class="info-item">
+                                    <strong>Disciplines :</strong><span>Musique, Objets, Facéties</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intentions -->
+                <div class="concept-section">
+                    <h2>Esprit du voyage</h2>
+                    <div class="concept-content">
+                        <p>Chaque rotation est une petite traversée sensible : improvisations musicales, interactions ludiques et métamorphoses poétiques de l’équipage. Un micro-univers marin qui se réinvente selon la marée des émotions du public.</p>
+                    </div>
+                </div>
+
+                <!-- Équipe -->
+                <div class="team-section">
+                    <h2>L'équipage</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>AE</span></div></div>
+                            <h3 class="member-name">Amélie Etchegaray</h3>
+                            <p class="member-role">Créatures & Jeu</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>PG</span></div></div>
+                            <h3 class="member-name">Patrice Gelin</h3>
+                            <p class="member-role">Jeu & Musique</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>VR</span></div></div>
+                            <h3 class="member-name">Véronique Renard</h3>
+                            <p class="member-role">Jeu & Objets</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>LB</span></div></div>
+                            <h3 class="member-name">Lucie Botiveau</h3>
+                            <p class="member-role">Facéties & Douceur</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>SR</span></div></div>
+                            <h3 class="member-name">Sandra Racodon</h3>
+                            <p class="member-role">Jeu & Coordination</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>OC</span></div></div>
+                            <h3 class="member-name">Olivier Clément</h3>
+                            <p class="member-role">Participation ponctuelle</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>MB</span></div></div>
+                            <h3 class="member-name">Maxime Bernery</h3>
+                            <p class="member-role">Participation ponctuelle</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-photo"><div class="photo-placeholder"><span>IA</span></div></div>
+                            <h3 class="member-name">Indiana Améziane</h3>
+                            <p class="member-role">Participation ponctuelle</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="contact-spectacle">
+                    <div class="contact-box">
+                        <h3>Embarquer le Faubourg des Mers</h3>
+                        <p>Contactez-nous pour conditions, implantation et accompagnement artistique.</p>
+                        <a href="contact.html" class="contact-button">Nous contacter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="public/la_cie_du_faubourg_3_br.gif" alt="Logo Collectif du Faubourg">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Le Collectif du Faubourg. Tous droits réservés.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
+</html>
