@@ -1008,7 +1008,6 @@ body:not([data-page="spectacles"]) .spectacle-card,
 .ensemble-item,
 .category,
 .event-card,
-.overview-item { composes: reveal-base; } /* (ignore if unsupported) */
 
 /* Fallback for compose unsupported */
 body:not([data-page="spectacles"]) .spectacle-card,
