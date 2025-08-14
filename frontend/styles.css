@@ -1042,6 +1042,22 @@ body:not([data-page="spectacles"]) .spectacle-card.revealed,
   .gallery-thumbnails { grid-template-columns:repeat(auto-fill,minmax(58px,1fr)); }
 }
 
+/* Fix cadrage cartes spectacles (bord blanc à droite) */
+.spectacle-card .card-image {
+  position:relative;
+}
+
+.spectacle-card .card-image img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* (Optionnel) supprime tout éventuel artefact de sub‑pixel */
+.spectacle-card .card-image { transform:translateZ(0); }
+
 /* Remove legacy / duplicates:
    - Anciennes surcharges .section-faubourg full width,
    - Ancienne animation observer redondante,
