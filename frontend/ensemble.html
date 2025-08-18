@@ -32,14 +32,16 @@
 </header>
 
 <main class="main" id="main-content" tabindex="-1">
-    <!-- Événements Ponctuels Section -->
+    <!-- Événements Ponctuels + Affiches (fusion) -->
     <section id="evenements-ponctuels" class="section section-evenements page-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Événements Ponctuels</h2>
                 <div class="section-ornament"></div>
-                <p class="section-subtitle">Nos créations et participations exceptionnelles</p>
+                <p class="section-subtitle">Nos créations, participations et supports visuels</p>
             </div>
+
+            <!-- Événements -->
             <div class="evenements-grid">
                 <div class="evenement-item">
                     <div class="evenement-date">
@@ -72,34 +74,15 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Affiches Section -->
-    <section id="affiches" class="section section-affiches page-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Affiches</h2>
-                <div class="section-ornament"></div>
-                <p class="section-subtitle">L'univers visuel de nos créations</p>
-            </div>
-            <div class="affiches-gallery">
-                <div class="affiche-item">
-                    <div class="affiche-info">
-                        <h3>Printemps du Faubourg</h3>
-                        <p>Dossier / Affiche PDF</p>
-                        <p><a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">Ouvrir le PDF</a></p>
+            <!-- Affiches (intégrées) -->
+            <div class="affiches-section" style="margin-top:2.5rem;">
+                <h3 class="section-title" style="font-size:1.8rem; margin-bottom:1.2rem;">Affiches</h3>
+                <div class="affiches-gallery">
+                    <div class="affiche-item">
+                        <img src="public/affiche1.jpg" alt="Affiche Printemps du Faubourg" loading="lazy">
                     </div>
-                    <details class="pdf-preview-wrapper">
-                        <summary>Prévisualiser l'affiche</summary>
-                        <div class="pdf-preview" role="region" aria-label="Prévisualisation PDF Printemps du Faubourg">
-                            <iframe src="public/AFFICHE%20Printemps%20du%20Faubourg.pdf#zoom=page-width&scrollbar=0&toolbar=0&navpanes=0" title="Affiche Printemps du Faubourg (prévisualisation)" loading="lazy"></iframe>
-                            <div class="pdf-fallback">
-                                Si le PDF ne s'affiche pas,
-                                <a href="public/AFFICHE%20Printemps%20du%20Faubourg.pdf" target="_blank" rel="noopener">cliquez ici pour le télécharger</a>.
-                            </div>
-                        </div>
-                    </details>
+                    <!-- Ajouter d'autres affiches si besoin -->
                 </div>
             </div>
         </div>
@@ -113,7 +96,6 @@
                 <div class="section-ornament"></div>
                 <p class="section-subtitle">Les artistes qui donnent vie au Collectif du Faubourg</p>
             </div>
-
             <div class="ensemble-grid">
                 <!-- Indiana Améziane -->
                 <div class="ensemble-item">

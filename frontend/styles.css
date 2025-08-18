@@ -350,7 +350,7 @@ a { color: inherit; text-decoration: none; }
 
 .overview-grid { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
 
-.spectacles-grid { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+.spectacles-grid { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
 
 .ensemble-grid { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
 
@@ -1063,3 +1063,42 @@ body:not([data-page="spectacles"]) .spectacle-card.revealed,
    - Styles répétés body, nav, placeholders,
    - Cartes spectacles cachées sur page spectacles,
    - Parallax inefficace. */
+
+/* Uniformisation des cartes spectacles */
+.spectacles-grid {
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.spectacle-card {
+  display:flex;
+  flex-direction:column;
+  min-height:340px; /* hauteur uniforme */
+}
+
+.spectacle-card .card-image {
+  flex:0 0 auto;
+  aspect-ratio:4/3;
+}
+
+.spectacle-card .card-image img {
+  object-fit:cover;
+  object-position:center center;
+}
+
+.spectacle-card .card-title,
+.spectacle-card .card-description {
+  margin:0;
+}
+
+.spectacle-card .card-title { margin-top:.25rem; }
+
+.spectacle-card .card-description {
+  margin-top:.15rem;
+  font-size:.8rem;
+  line-height:1.3;
+  color:var(--color-text-light);
+}
+
+@media (max-width:560px){
+  .spectacle-card { min-height:300px; }
+}
