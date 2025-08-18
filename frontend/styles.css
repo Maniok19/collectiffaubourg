@@ -506,13 +506,28 @@ a { color: inherit; text-decoration: none; }
 
 .affiches-gallery {
   display:grid;
-  gap:1.4rem;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.2rem;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 }
 
-.affiche-image a { display:block; aspect-ratio: 3 / 4; overflow:hidden; border-radius:var(--radius); background:#f3f3f3; }
-.affiche-image img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
-.affiche-item:hover img { transform:scale(1.05); }
+.affiche-item {
+  background:#fff;
+  border:1px solid #e9e4dd;
+  border-radius:var(--radius);
+  padding:.75rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:var(--shadow-sm);
+}
+
+.affiche-item img {
+  width:100%;
+  height:auto;
+  border-radius:var(--radius-sm);
+  object-fit:cover;
+  display:block;
+}
 
 .pdf-preview-wrapper summary {
   cursor:pointer;
@@ -1101,4 +1116,124 @@ body:not([data-page="spectacles"]) .spectacle-card.revealed,
 
 @media (max-width:560px){
   .spectacle-card { min-height:300px; }
+}
+
+/* ================================
+   Artists preview (Accueil)
+==================================*/
+.artists-section { padding-top:3rem; }
+
+.artists-grid {
+  display:grid;
+  gap:clamp(.9rem,1.6vw,1.2rem);
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+}
+
+.artist-card {
+  position:relative;
+  background:#fff;
+  border:1px solid #e5ded3;
+  border-radius:18px;
+  padding:.85rem .75rem 1rem;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:.55rem;
+  box-shadow:var(--shadow-sm);
+  transition:var(--transition);
+  overflow:hidden;
+}
+
+.artist-card::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(212,165,116,.18),transparent 60%),
+    radial-gradient(circle at 80% 80%,rgba(44,24,16,.08),transparent 65%);
+  opacity:0;
+  transition:opacity .4s ease;
+  pointer-events:none;
+}
+
+.artist-card:hover {
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.artist-card:hover::before { opacity:1; }
+
+.artist-avatar {
+  position:relative;
+  width:100%;
+  aspect-ratio:1/1;
+  border-radius:14px;
+  overflow:hidden;
+  background:#f6f3ef;
+  border:1px solid #e2d8cc;
+}
+
+.artist-avatar img {
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.artist-card:hover .artist-avatar img { transform:scale(1.07); }
+
+.avatar-fallback {
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-display);
+  font-size:1.1rem;
+  background:linear-gradient(135deg,#f2ece5,#e7dbcf);
+  color:#7a5532;
+  letter-spacing:.5px;
+}
+
+.artist-name {
+  font-family:var(--font-display);
+  font-size:.9rem;
+  margin:0;
+  line-height:1.15;
+  color:var(--color-primary);
+}
+
+.artist-role {
+  margin:0;
+  font-size:.62rem;
+  font-weight:600;
+  letter-spacing:.9px;
+  text-transform:uppercase;
+  color:var(--color-text-light);
+}
+
+.artists-cta {
+  margin-top:1.8rem;
+  text-align:center;
+}
+
+.cta-link.small {
+  font-size:.7rem;
+  padding:.55rem .9rem;
+  letter-spacing:.8px;
+}
+
+/* Reveal integration */
+body:not([data-page="spectacles"]) .artist-card {
+  opacity:0;
+  transform:translateY(25px);
+}
+
+body:not([data-page="spectacles"]) .artist-card.revealed {
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media (max-width:560px){
+  .artist-card { padding:.7rem .65rem .85rem; }
+  .artist-name { font-size:.85rem; }
 }
