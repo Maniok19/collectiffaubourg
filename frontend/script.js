@@ -393,4 +393,20 @@ document.addEventListener('DOMContentLoaded', function() {
             e.target.click();
         }
     });
+
+    // Intersection Observer for reveal animations
+    document.addEventListener('DOMContentLoaded', () => {
+        if ('IntersectionObserver' in window) {
+            document.body.classList.add('js-reveal-enabled');
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('revealed');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('.artist-card').forEach(el => io.observe(el));
+        }
+    });
 });

@@ -1222,13 +1222,19 @@ body:not([data-page="spectacles"]) .spectacle-card.revealed,
   letter-spacing:.8px;
 }
 
-/* Reveal integration */
+/* Reveal integration (robust) */
 body:not([data-page="spectacles"]) .artist-card {
+  opacity:1;
+  transform:none;
+  transition:opacity .6s ease, transform .6s ease;
+}
+
+body.js-reveal-enabled:not([data-page="spectacles"]) .artist-card {
   opacity:0;
   transform:translateY(25px);
 }
 
-body:not([data-page="spectacles"]) .artist-card.revealed {
+body.js-reveal-enabled:not([data-page="spectacles"]) .artist-card.revealed {
   opacity:1;
   transform:translateY(0);
 }
@@ -1236,4 +1242,67 @@ body:not([data-page="spectacles"]) .artist-card.revealed {
 @media (max-width:560px){
   .artist-card { padding:.7rem .65rem .85rem; }
   .artist-name { font-size:.85rem; }
+}
+
+/* Uniform height for all spectacle cards across categories */
+:root {
+  --spectacle-card-height-desktop: 360px;
+  --spectacle-card-height-mobile: 300px;
+}
+
+.spectacle-card {
+  height: var(--spectacle-card-height-desktop);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 560px) {
+  .spectacle-card {
+    height: var(--spectacle-card-height-mobile);
+  }
+}
+
+/* Ensure image area is consistent; remove aspect-ratio dependency on width */
+.spectacle-card .card-image {
+  flex: 0 0 58%;
+  aspect-ratio: auto; /* override previous 4/3 so height stays constant */
+  position: relative;
+}
+
+.spectacle-card .card-image img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Clamp text so varying lengths don't change card height */
+.spectacle-card .card-title {
+  flex: 0 0 auto;
+  margin-top:.4rem;
+}
+
+.spectacle-card .card-description {
+  flex: 1 1 auto;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3; /* adjust if you want more lines */
+  overflow:hidden;
+  margin-top:.3rem;
+}
+
+/* Optional: subtle fade for truncated text */
+.spectacle-card .card-description {
+  position:relative;
+}
+
+.spectacle-card .card-description::after {
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:1.4rem;
+  background:linear-gradient(to bottom,rgba(255,255,255,0), #fff);
+  pointer-events:none;
 }
