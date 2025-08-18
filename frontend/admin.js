@@ -109,12 +109,14 @@ function showAdmin() {
   refreshEvents();
 }
 
-// On load: try to load events (if session still valid)
-(async () => {
+// Replace the previous auto-load IIFE with a real session check
+async function checkSession() {
   try {
-    await refreshEvents();
+    await api('/api/admin/session'); // will 401 if not logged
     showAdmin();
   } catch {
     showLogin();
   }
-})();
+}
+
+checkSession(); // on page load

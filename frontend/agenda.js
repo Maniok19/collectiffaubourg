@@ -1,4 +1,5 @@
 (async function(){
+  console.log('[agenda] script chargé');
   const container = document.getElementById('events-dynamic');
   if (!container) return;
 
@@ -11,8 +12,9 @@
 
   try {
     const res = await fetch('/api/events', { credentials:'include' });
-    if (!res.ok) throw new Error('Erreur chargement');
+    console.log('[agenda] status', res.status);
     const events = await res.json();
+    console.log('[agenda] events reçus', events);
     if (!events.length) {
       container.innerHTML = '<p>Aucun événement programmé pour le moment.</p>';
       return;
@@ -23,7 +25,7 @@
       const day = String(dateObj.getDate()).padStart(2,'0');
       const year = dateObj.getFullYear();
       return `
-        <div class="event-card">
+        <div class="event-card" style="border:1px solid #ccc;">
           <div class="event-date">
             <span class="month">${month}</span>
             <span class="day">${day}</span>
@@ -39,6 +41,9 @@
         </div>
       `;
     }).join('');
+    console.log('[agenda] après injection, cards =',
+      document.querySelectorAll('#events-dynamic .event-card').length);
+    console.log('[agenda] HTML =', container.innerHTML);
   } catch (err) {
     container.innerHTML = `<p style="color:#c00;">${err.message}</p>`;
   }

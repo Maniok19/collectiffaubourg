@@ -66,10 +66,16 @@ app.post('/api/logout', (req, res) => {
   });
 });
 
+// Add a session check route (protected)
+app.get('/api/admin/session', requireAuth, (req, res) => {
+  res.json({ ok: true });
+});
+
 // Public: list events
 app.get('/api/events', (req, res) => {
   const events = loadEvents()
     .sort((a, b) => (a.date + a.heure).localeCompare(b.date + b.heure));
+  console.log('[GET /api/events] ->', events.length, 'événements');
   res.json(events);
 });
 
