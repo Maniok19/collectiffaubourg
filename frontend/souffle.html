@@ -74,9 +74,16 @@
                             </div>
                         </div>
                         <div class="gallery-thumbnails">
-                            <div class="thumbnail-placeholder">
-                                <span>Galerie photos à venir</span>
-                            </div>
+                            <!-- Miniatures supplémentaires -->
+                            <button class="thumb" type="button">
+                                <img src="public/sp1_souffle/souffle1.jpg" alt="Souffle - Photo 1" loading="lazy" onerror="this.style.visibility='hidden';">
+                            </button>
+                            <button class="thumb" type="button">
+                                <img src="public/sp1_souffle/souffle2.jpg" alt="Souffle - Photo 2" loading="lazy" onerror="this.style.visibility='hidden';">
+                            </button>
+                            <button class="thumb" type="button">
+                                <img src="public/sp1_souffle/souffle3.jpg" alt="Souffle - Photo 3" loading="lazy" onerror="this.style.visibility='hidden';">
+                            </button>
                         </div>
                     </div>
 
@@ -140,6 +147,36 @@
                     </div>
                 </div>
 
+                <!-- Nouvelle section vidéo -->
+                <section class="spectacle-media" aria-labelledby="souffle-video-title">
+                    <div class="media-inner">
+                        <h2 id="souffle-video-title">Diaporama vidéo</h2>
+                        <p class="media-intro">Un aperçu visuel et sonore de l’univers de Souffle.</p>
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" poster="public/sp1_souffle/souffle1.jpg">
+                                <source src="public/sp1_souffle/SOUFFLE%20DIAPORAMA.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo HTML5.
+                            </video>
+                        </div>
+                        <p class="media-caption">Extrait / diaporama (usage interne programmation).</p>
+                    </div>
+                </section>
+
+                <!-- Section ressources / dossier -->
+                <section class="spectacle-resources" aria-labelledby="souffle-ressources-title">
+                    <div class="resources-inner">
+                        <h2 id="souffle-ressources-title">Documents à télécharger</h2>
+                        <p class="resources-intro">Retrouvez le dossier complet de présentation du spectacle.</p>
+                        <ul class="download-list">
+                            <li>
+                                <a class="download-link" href="public/sp1_souffle/SOUFFLE%20dossier%202025.pdf" download>
+                                    Télécharger le dossier Souffle 2025 (PDF)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                
                 <!-- Team Section -->
                 <div class="team-section">
                     <h2>L'équipe</h2>

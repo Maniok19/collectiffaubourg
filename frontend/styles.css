@@ -1323,3 +1323,113 @@ body.js-reveal-enabled:not([data-page="spectacles"]) .artist-card.revealed {
   transform:scale(1.05);
   transition:transform .6s ease;
 }
+
+/* === Souffle: media & resources sections === */
+.spectacle-media,
+.spectacle-resources {
+  margin-top:clamp(2.4rem,4.2vw,3.4rem);
+  background:linear-gradient(135deg,#fbfaf8,#f2ece5);
+  border:1px solid #e7dfd5;
+  border-radius:var(--radius-lg);
+  padding:clamp(1.4rem,2vw,2rem) clamp(1.2rem,2.4vw,2.2rem);
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+}
+
+.spectacle-media::before,
+.spectacle-resources::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 18% 22%,rgba(212,165,116,.15),transparent 60%),
+    radial-gradient(circle at 82% 78%,rgba(44,24,16,.08),transparent 65%);
+  pointer-events:none;
+  mix-blend-mode:overlay;
+}
+
+.spectacle-media h2,
+.spectacle-resources h2 {
+  margin:0 0 .9rem;
+  font-family:var(--font-display);
+  font-size:1.85rem;
+  color:var(--color-primary);
+}
+
+.media-intro,
+.resources-intro {
+  margin:0 0 1.1rem;
+  font-size:.95rem;
+  color:var(--color-text-light);
+}
+
+.video-wrapper {
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  background:#000;
+  aspect-ratio:16/9;
+  box-shadow:0 8px 26px -8px rgba(0,0,0,.25);
+}
+
+.video-wrapper video {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.media-caption {
+  margin:.75rem 0 0;
+  font-size:.7rem;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  color:#7a6049;
+  font-weight:600;
+}
+
+.spectacle-resources .download-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.9rem;
+}
+
+.download-link {
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  background:var(--color-primary);
+  color:#fff;
+  padding:.75rem 1.05rem;
+  font-size:.8rem;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  font-weight:600;
+  border-radius:var(--radius-sm);
+  position:relative;
+  overflow:hidden;
+  transition:var(--transition);
+  text-decoration:none;
+}
+
+.download-link::before {
+  content:"⬇";
+  font-size:.9rem;
+  transform:translateY(-1px);
+}
+
+.download-link:hover {
+  background:var(--color-accent);
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px -6px rgba(230,57,70,.4);
+}
+
+@media (max-width:640px){
+  .spectacle-media h2,
+  .spectacle-resources h2 { font-size:1.55rem; }
+  .video-wrapper { aspect-ratio:16/9; }
+}
