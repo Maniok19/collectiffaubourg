@@ -60,31 +60,29 @@
         <div class="container">
             <div class="content-grid">
                 <!-- Galerie -->
-                <div class="gallery-section" aria-label="Galerie d’images La Fabrique à Histoire">
+                <div class="gallery-section" aria-label="Galerie d’images La Fabrique d’Histoires">
                     <div class="main-image-container">
-                        <!-- Affiche principale -->
-                        <img src="public/sp5_fabriquehistoire/affiche_je_parle_la_bouche_pleine.jpg"
+                        <img class="main-image"
+                             src="public/sp5_fabriquehistoire/fabrique_main.jpg"
                              alt="Affiche du projet Je parle la bouche pleine ou la voix de la terre"
-                             class="main-spectacle-image"
-                             loading="lazy"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder main-placeholder" style="display:none;">
-                            <span>Affiche du projet</span>
-                        </div>
+                             loading="eager"
+                             onerror="this.style.display='none';">
                     </div>
-                    <div class="gallery-thumbnails">
-                        <!-- Vignette récit -->
-                        <figure class="thumbnail">
-                            <img src="public/sp5_fabriquehistoire/recit_scene.jpg"
-                                 alt="Moment de récit sur scène pendant le projet"
-                                 loading="lazy">
-                        </figure>
-                        <!-- Vignette musiciennes -->
-                        <figure class="thumbnail">
-                            <img src="public/sp5_fabriquehistoire/musiciennes_exterieur.jpg"
-                                 alt="Deux musiciennes aux accordéons dans une scénographie végétale"
-                                 loading="lazy">
-                        </figure>
+
+                    <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                        <img src="public/sp5_fabriquehistoire/fabrique1.jpg"
+                             alt="Agrandir affiche du projet"
+                             class="active"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
+                        <img src="public/sp5_fabriquehistoire/fabrique2.jpg"
+                             alt="Agrandir moment de récit sur scène"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
+                        <img src="public/sp5_fabriquehistoire/fabrique_main.jpg"
+                             alt="Agrandir deux musiciennes aux accordéons"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
                     </div>
                 </div>
 
@@ -99,15 +97,6 @@
                                <strong>Production :</strong> Compagnie / Collectif du Faubourg</p>
                             <p>Collectage de paroles paysannes dans le Sud-Luberon au fil des 4 saisons.</p>
                             <p>Une idée d’Agnès Dauban assistée de Marco Rullier avec le soutien de l'association <em>Au Maquis!</em> et du <em>Grand Ménage de Printemps</em>.</p>
-                            <p><strong>Photographies :</strong> Samuel Domingo</p>
-
-                            <!-- Image récit intégrée dans le flux -->
-                            <figure class="inline-figure">
-                                <img src="public/sp5_fabriquehistoire/recit_scene.jpg"
-                                     alt="Récit en scène avec éléments végétaux"
-                                     loading="lazy">
-                                <figcaption>Récit vivant autour des voix paysannes. Photo Samuel Domingo.</figcaption>
-                            </figure>
 
                             <blockquote class="story-blockquote">
                                 Raconter ceux et celles qui prennent soins de la vie depuis la terre jusqu’à nos bouches.

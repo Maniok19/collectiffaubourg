@@ -64,19 +64,31 @@
                 <!-- Galerie -->
                 <div class="gallery-section" aria-label="Galerie d’images Le Néanderbal">
                     <div class="main-image-container">
-                        <img src="public/sp7_neanderbal/neanderbal_main.jpg"
-                             alt="Le Néanderbal"
-                             class="main-spectacle-image"
-                             loading="lazy"
-                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="image-placeholder main-placeholder" style="display:none;">
-                            <span>Le Néanderbal</span>
-                        </div>
+                        <img class="main-image"
+                             src="public/sp7_neanderbal/neanderbal_main.png"
+                             alt="Le Néanderbal - image 1"
+                             loading="eager"
+                             onerror="this.style.display='none';">
                     </div>
-                    <div class="gallery-thumbnails">
-                        <div class="thumbnail-placeholder">
-                            <span>Galerie photos à venir</span>
-                        </div>
+
+                    <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                        <img src="public/sp7_neanderbal/neanderbal_main.png"
+                             alt="Agrandir image 1"
+                             class="active"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
+                        <img src="public/sp7_neanderbal/neanderbal1.jpg"
+                             alt="Agrandir image 2"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
+                        <img src="public/sp7_neanderbal/neanderbal2.jpg"
+                             alt="Agrandir image 3"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
+                        <img src="public/sp7_neanderbal/neanderbal3.jpg"
+                             alt="Agrandir image 4"
+                             role="button" tabindex="0"
+                             onerror="this.style.display='none';">
                     </div>
                 </div>
 
@@ -174,4 +186,6 @@
     </div>
 </footer>
 
-<script src=
+<script src="script.js" defer></script>
+</body>
+</html>

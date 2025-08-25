@@ -375,6 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 'faubourgdesmers': 'faubourgdesmers.html',
                 'fabriquehistoire': 'fabriquehistoire.html',
                 'queterale': 'queterale.html',
+                'neanderbal': 'neanderbal.html', // ← ajout
                 // Add other spectacle pages here as they are created
                 // etc.
             };
@@ -409,4 +410,129 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.artist-card').forEach(el => io.observe(el));
         }
     });
+
+    // === Carousel (queterale page only) ===
+    document.addEventListener('DOMContentLoaded', () => {
+      if (document.body.dataset.page !== 'queterale') return;
+
+      const setupCarousel = (root) => {
+        const track = root.querySelector('.carousel-track');
+        const slides = Array.from(root.querySelectorAll('.carousel-slide'));
+        const prevBtn = root.querySelector('.carousel-btn.prev');
+        const nextBtn = root.querySelector('.carousel-btn.next');
+        const dotsWrap = root.querySelector('.carousel-dots');
+
+        let index = 0;
+        let timer = null;
+        const autoplay = root.dataset.autoplay !== 'false';
+        const interval = parseInt(root.dataset.interval, 10) || 5000;
+        const len = slides.length;
+        const clamp = (n) => (n + len) % len;
+
+        const buildDots = () => {
+          slides.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.setAttribute('role', 'tab');
+            b.setAttribute('aria-label', `Aller à l'image ${i + 1}`);
+            b.addEventListener('click', () => { go(i); resetTimer(); });
+            dotsWrap.appendChild(b);
+          });
+        };
+
+        const updateDots = () => {
+          const dots = dotsWrap.querySelectorAll('button');
+          dots.forEach((d, i) => d.setAttribute('aria-selected', i === index ? 'true' : 'false'));
+        };
+
+        const render = () => {
+          track.style.transform = `translateX(${-index * 100}%)`;
+          updateDots();
+        };
+
+        const go = (i) => {
+          index = clamp(i);
+          render();
+        };
+
+        const next = () => go(index + 1);
+        const prev = () => go(index - 1);
+
+        const start = () => { if (!autoplay || timer) return; timer = setInterval(next, interval); };
+        const stop = () => { if (timer) clearInterval(timer); timer = null; };
+        const resetTimer = () => { stop(); start(); };
+
+        prevBtn.addEventListener('click', () => { prev(); resetTimer(); });
+        nextBtn.addEventListener('click', () => { next(); resetTimer(); });
+
+        // Pause on hover/focus
+        root.addEventListener('mouseenter', stop);
+        root.addEventListener('mouseleave', start);
+        root.addEventListener('focusin', stop);
+        root.addEventListener('focusout', start);
+
+        // Keyboard navigation
+        root.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight') { next(); resetTimer(); }
+          if (e.key === 'ArrowLeft')  { prev(); resetTimer(); }
+        });
+
+        // Touch/Pointer swipe
+        let startX = 0, deltaX = 0, down = false;
+        const onDown = (e) => { down = true; startX = (e.touches ? e.touches[0].clientX : e.clientX); deltaX = 0; stop(); };
+        const onMove = (e) => {
+          if (!down) return;
+          const x = (e.touches ? e.touches[0].clientX : e.clientX);
+          deltaX = x - startX;
+        };
+        const onUp = () => {
+          if (!down) return;
+          down = false;
+          if (Math.abs(deltaX) > 40) { deltaX < 0 ? next() : prev(); }
+          start();
+        };
+
+        track.addEventListener('pointerdown', onDown);
+        window.addEventListener('pointermove', onMove);
+        window.addEventListener('pointerup', onUp);
+
+        track.addEventListener('touchstart', onDown, { passive: true });
+        track.addEventListener('touchmove', onMove, { passive: true });
+        track.addEventListener('touchend', onUp);
+
+        buildDots();
+        render();
+        start();
+      };
+
+      document.querySelectorAll('.carousel').forEach(setupCarousel);
+    });
+
+    // === Galerie: swap vignette -> image principale (toutes pages avec .gallery-section) ===
+    (function initThumbnailGalleries() {
+        const galleries = document.querySelectorAll('.gallery-section');
+        galleries.forEach(gallery => {
+            const mainImg = gallery.querySelector('.main-image-container .main-image, .main-image-container img');
+            const thumbs = Array.from(gallery.querySelectorAll('.gallery-thumbnails img'));
+            if (!mainImg || thumbs.length === 0) return;
+
+            const setMain = (src, altText) => {
+                mainImg.src = src;
+                const cleaned = (altText || '').replace(/^Agrandir\s*/i, '').trim();
+                mainImg.alt = cleaned || mainImg.alt || 'Image du spectacle';
+            };
+
+            thumbs.forEach(img => {
+                const activate = () => {
+                    thumbs.forEach(t => t.classList.remove('active'));
+                    img.classList.add('active');
+                    setMain(img.src, img.alt);
+                };
+                img.addEventListener('click', activate);
+                img.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+                });
+            });
+        });
+    })();
 });

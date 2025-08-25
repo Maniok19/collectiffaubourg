@@ -64,18 +64,27 @@
                     <!-- Galerie -->
                     <div class="gallery-section">
                         <div class="main-image-container">
-                            <img src="public/sp6_queterale/Photo Neanderbal 05_2024.png"
-                                 alt="La Quête du Râle" class="main-spectacle-image"
-                                 loading="lazy"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder main-placeholder" style="display:none;">
-                                <span>La Quête du Râle</span>
-                            </div>
+                            <img class="main-image"
+                                 src="public/sp6_queterale/queterale_main.jpg"
+                                 alt="La Quête du Râle - image 1"
+                                 loading="eager"
+                                 onerror="this.style.display='none';">
                         </div>
-                        <div class="gallery-thumbnails">
-                            <div class="thumbnail-placeholder">
-                                <span>Galerie photos à venir</span>
-                            </div>
+
+                        <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                            <img src="public/sp6_queterale/queterale_main.jpg"
+                                 alt="Agrandir image 1"
+                                 class="active"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp6_queterale/queterale1.jpg"
+                                 alt="Agrandir image 2"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp6_queterale/queterale2.jpg"
+                                 alt="Agrandir image 3"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
                         </div>
                     </div>
 

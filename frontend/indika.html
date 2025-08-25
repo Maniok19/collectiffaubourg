@@ -68,15 +68,26 @@
                     <!-- Image Gallery -->
                     <div class="gallery-section">
                         <div class="main-image-container">
-                            <img src="public/sp3_indika/indika_main.jpg" alt="Indika" class="main-spectacle-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder main-placeholder" style="display:none;">
-                                <span>Indika</span>
-                            </div>
+                            <img class="main-image"
+                                 src="public/sp3_indika/indika_main.jpg"
+                                 alt="Indika - image 1"
+                                 loading="eager"
+                                 onerror="this.style.display='none';">
                         </div>
-                        <div class="gallery-thumbnails">
-                            <div class="thumbnail-placeholder">
-                                <span>Galerie photos à venir</span>
-                            </div>
+                        <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                            <img src="public/sp3_indika/indika_main.jpg"
+                                 alt="Agrandir image 1"
+                                 class="active"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp3_indika/indika1.jpg"
+                                 alt="Agrandir image 2"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp3_indika/indika2.jpg"
+                                 alt="Agrandir image 3"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
                         </div>
                     </div>
 

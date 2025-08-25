@@ -64,25 +64,23 @@
                     <!-- Galerie -->
                     <div class="gallery-section">
                         <div class="main-image-container">
-                            <img src="public/sp4_faubourgmers/faubourgmers_main.jpg"
-                                 alt="Faubourg des Mers"
-                                 class="main-spectacle-image"
-                                 loading="lazy"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder main-placeholder" style="display:none;">
-                                <span>Faubourg des Mers</span>
-                            </div>
+                            <img class="main-image"
+                                 src="public/sp4_faubourgmers/faubourgmers_main.jpg"
+                                 alt="Faubourg des Mers - image 1"
+                                 loading="eager"
+                                 onerror="this.style.display='none';">
                         </div>
-                        <div class="gallery-thumbnails">
-                            <div class="thumbnail-placeholder">
-                                <span>Galerie photos à venir</span>
-                            </div>
-                            <!-- Photo_1 ajoutée : détail visuel immédiatement reconnaissable -->
-                            <figure class="thumbnail">
-                                <img src="public/sp4_faubourgmers/Photo_1.jpg"
-                                     alt="Détail de l'enseigne Au Faubourg des Mers sur le manège"
-                                     loading="lazy">
-                            </figure>
+
+                        <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                            <img src="public/sp4_faubourgmers/faubourgmers_main.jpg"
+                                 alt="Agrandir image 1"
+                                 class="active"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp4_faubourgmers/faubourgmers1.jpg"
+                                 alt="Agrandir image 2 - Détail de l'enseigne Au Faubourg des Mers sur le manège"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
                         </div>
                     </div>
 

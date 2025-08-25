@@ -68,22 +68,30 @@
                     <!-- Image Gallery -->
                     <div class="gallery-section" aria-label="Galerie d’images Souffle">
                         <div class="main-image-container">
-                            <img src="public/sp1_souffle/PhotopagepersoSOUFFLE.jpg" alt="Souffle" class="main-spectacle-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="image-placeholder main-placeholder" style="display:none;">
-                                <span>Souffle</span>
-                            </div>
+                            <img class="main-image"
+                                 src="public/sp1_souffle/souffle_main.jpg"
+                                 alt="Souffle - image 1"
+                                 loading="eager"
+                                 onerror="this.style.display='none';">
                         </div>
-                        <div class="gallery-thumbnails">
-                            <!-- Miniatures supplémentaires -->
-                            <button class="thumb" type="button">
-                                <img src="public/sp1_souffle/souffle1.jpg" alt="Souffle - Photo 1" loading="lazy" onerror="this.style.visibility='hidden';">
-                            </button>
-                            <button class="thumb" type="button">
-                                <img src="public/sp1_souffle/souffle2.jpg" alt="Souffle - Photo 2" loading="lazy" onerror="this.style.visibility='hidden';">
-                            </button>
-                            <button class="thumb" type="button">
-                                <img src="public/sp1_souffle/souffle3.jpg" alt="Souffle - Photo 3" loading="lazy" onerror="this.style.visibility='hidden';">
-                            </button>
+                        <div class="gallery-thumbnails" role="list" aria-label="Vignettes de la galerie">
+                            <img src="public/sp1_souffle/souffle1.jpg"
+                                 alt="Agrandir image 1"
+                                 class="active"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp1_souffle/souffle2.jpg"
+                                 alt="Agrandir image 2"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp1_souffle/souffle3.jpg"
+                                 alt="Agrandir image 3"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
+                            <img src="public/sp1_souffle/souffle_main.jpg"
+                                 alt="Agrandir image 4"
+                                 role="button" tabindex="0"
+                                 onerror="this.style.display='none';">
                         </div>
                     </div>
 
