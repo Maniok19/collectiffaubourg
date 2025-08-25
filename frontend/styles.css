@@ -46,6 +46,33 @@ a { color: inherit; text-decoration: none; }
   --shadow-lg:0 10px 34px -10px rgba(0,0,0,.18);
 
   --transition:.3s cubic-bezier(.4,.18,.2,1);
+
+  /* New: breakpoints + component scales */
+  --bp-sm:560px;
+  --bp-md:820px;
+  --bp-lg:960px;
+  --container-max:1200px;
+
+  /* New: unified spectacle card sizing */
+  --spectacle-card-h:420px;
+  /* Hauteur mobile un peu plus grande pour la lisibilité */
+  --spectacle-card-h-sm:400px;
+
+  /* FIXED width for spectacle cards */
+  --spectacle-card-w:280px;
+  --spectacle-card-w-sm:260px;
+
+  /* Fixed size for artist cards */
+  --artist-card-w: 180px;
+  --artist-card-h: 260px;
+  --artist-card-w-sm: 160px;
+  --artist-card-h-sm: 240px;
+
+  /* Fixed size for team cards */
+  --team-card-w: 180px;
+  --team-card-h: 260px;
+  --team-card-w-sm: 160px;
+  --team-card-h-sm: 240px;
 }
 
 /* ================================
@@ -336,7 +363,72 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ================================
-   Grids / Reusable
+   Shared UI additions (coherence)
+==================================*/
+
+/* Breadcrumb */
+.breadcrumb-section { background:var(--color-light); padding:.6rem 0; }
+.breadcrumb { font-size:.9rem; color:var(--color-text-light); display:flex; align-items:center; flex-wrap:wrap; gap:.35rem; }
+.breadcrumb a { color:var(--color-primary); text-decoration:none; }
+.breadcrumb a:hover { text-decoration:underline; }
+.breadcrumb-separator { color:#aaa; }
+
+/* Subcategory titles (Spectacles page) */
+.subcategory-title {
+  font-family:var(--font-display);
+  font-size:1.35rem;
+  margin:.5rem 0 1rem;
+  color:var(--color-primary);
+}
+
+/* Buttons (unified look for contact/submit) */
+.contact-button,
+.submit-button {
+  display:inline-block;
+  background:var(--color-primary);
+  color:#fff;
+  border:0;
+  padding:.75rem 1.05rem;
+  border-radius:var(--radius-sm);
+  font-size:.9rem;
+  letter-spacing:.3px;
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .25s ease, background .25s ease;
+}
+.contact-button:hover,
+.submit-button:hover { background:var(--color-accent); transform:translateY(-2px); box-shadow:var(--shadow); }
+
+/* Info grid (used in multiple pages) */
+.info-grid {
+  display:grid;
+  gap:.7rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.info-item strong {
+  display:block;
+  font-size:.7rem;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+  color:#7a6049;
+  margin-bottom:.15rem;
+}
+
+/* Sections commonly reused */
+.concept-section { margin-top:clamp(2rem,4vw,3rem); }
+.team-section { margin-top:clamp(2rem,4vw,3rem); }
+
+/* Footer */
+.footer { background:#fbfaf8; border-top:1px solid #ece5dc; }
+.footer .footer-content { padding:1.2rem 0; }
+.footer .footer-text { color:#7a6049; font-size:.85rem; text-align:center; }
+
+/* Minor responsive polish */
+@media (max-width: 640px){
+  .breadcrumb { font-size:.85rem; }
+}
+
+/* ================================
+   Grids / Reusable (updated)
 ==================================*/
 .overview-grid,
 .ensemble-grid,
@@ -350,14 +442,15 @@ a { color: inherit; text-decoration: none; }
 
 .overview-grid { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
 
-.spectacles-grid { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+/* Unified spectacles grid -> fixed-width columns, left-aligned */
+.spectacles-grid {
+  grid-template-columns: repeat(auto-fill, minmax(var(--spectacle-card-w), var(--spectacle-card-w)));
+  justify-content: start; /* aligner à gauche */
+}
 
 .ensemble-grid { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
-
 .team-grid { grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
-
 .approach-grid { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-
 .events-grid { grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); }
 
 /* ================================
@@ -643,7 +736,8 @@ a { color: inherit; text-decoration: none; }
 .artists-grid {
   display:grid;
   gap:clamp(.9rem,1.6vw,1.2rem);
-  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--artist-card-w), var(--artist-card-w)));
+  justify-content: start;
 }
 
 .artist-card {
@@ -659,6 +753,10 @@ a { color: inherit; text-decoration: none; }
   box-shadow:var(--shadow-sm);
   transition:var(--transition);
   overflow:hidden;
+
+  /* Fixed size */
+  width: var(--artist-card-w);
+  height: var(--artist-card-h);
 }
 
 .artist-card::before {
@@ -717,6 +815,12 @@ a { color: inherit; text-decoration: none; }
   margin:0;
   line-height:1.15;
   color:var(--color-primary);
+
+  /* Clamp to 2 lines for fixed height consistency */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .artist-role {
@@ -726,6 +830,12 @@ a { color: inherit; text-decoration: none; }
   letter-spacing:.9px;
   text-transform:uppercase;
   color:var(--color-text-light);
+
+  /* Clamp to 2 lines as well */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .artists-cta {
@@ -759,374 +869,126 @@ body.js-reveal-enabled:not([data-page="spectacles"]) .artist-card.revealed {
 @media (max-width:560px){
   .artist-card { padding:.7rem .65rem .85rem; }
   .artist-name { font-size:.85rem; }
+
+  /* Keep a fixed (but smaller) size on small screens */
+  .artists-grid {
+    grid-template-columns: repeat(auto-fill, minmax(var(--artist-card-w-sm), var(--artist-card-w-sm)));
+  }
+  .artist-card {
+    width: var(--artist-card-w-sm);
+    height: var(--artist-card-h-sm);
+  }
 }
 
-/* Uniform height for all spectacle cards across categories */
-:root {
-  --spectacle-card-height-desktop: 360px;
-  --spectacle-card-height-mobile: 300px;
-}
-
+/* ================================
+   Spectacles listing (unified)
+==================================*/
 .spectacle-card {
-  height: var(--spectacle-card-height-desktop);
+  /* keep base card visuals from the generic card block above */
+  /* auto height to avoid empty space under the description */
+  height: auto;
+   width: var(--spectacle-card-w); /* fixed width to match grid track */
+   display:flex;
+   flex-direction:column;
+   overflow:hidden;
+   /* reduce bottom padding to minimize white space */
+   padding-bottom: .5rem;
+}
+
+/* Keep a consistent media area */
+.spectacle-card .card-image {
+  margin:0 0 .6rem 0 !important;
+  border-radius: var(--radius) var(--radius) 0 0;
+  aspect-ratio: 16 / 10;
+  background:#f1f1f1;
+}
+.spectacle-card .card-image img {
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:center;
+  transition:transform .6s ease;
+}
+.spectacle-card:hover .card-image img { transform:scale(1.05); }
+
+/* Title + description clamp */
+.spectacle-card .card-title {
+  margin:.15rem 0 0;
+  font-size: 1.05rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.spectacle-card .card-description {
+  margin:.35rem 0 0;
+  font-size:.92rem;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+}
+
+/* Supprime le dégradé qui peut masquer le texte */
+.spectacle-card .card-description::after {
+  display: none;
+}
+
+/* NOTE: Please remove legacy/duplicate blocks further down to avoid conflicts:
+   - The second :root block that only carries spectacle-card heights
+   - The entire "Uniform height for all spectacle cards across categories"
+   - The entire "=== Uniformisation cartes spectacles (override final) ==="
+   This unified block supersedes them cleanly. */
+
+/* Spectacles > Tout public: 4 cartes sur une ligne (desktop), 2 (tablet), 1 (mobile) */
+.spectacles-category[aria-labelledby="heading-tout-public"] .spectacles-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  justify-content: start; /* aligner à gauche */
+}
+.spectacles-category[aria-labelledby="heading-tout-public"] .spectacle-card {
+  width: auto; /* override la largeur fixe pour cette catégorie */
+}
+
+@media (max-width: 960px) {
+  .spectacles-category[aria-labelledby="heading-tout-public"] .spectacles-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .spectacles-category[aria-labelledby="heading-tout-public"] .spectacles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   Grids / Reusable (fix team grid to fixed-width tracks)
+==================================*/
+.team-grid {
+  grid-template-columns: repeat(auto-fill, minmax(var(--team-card-w), var(--team-card-w)));
+  justify-content: start; /* alignées à gauche */
+}
+
+/* Team cards: fixed size, no responsive scaling */
+.team-member {
+  width: var(--team-card-w);
+  height: var(--team-card-h);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 560px) {
-  .spectacle-card {
-    height: var(--spectacle-card-height-mobile);
-  }
-}
-
-/* Ensure image area is consistent; remove aspect-ratio dependency on width */
-.spectacle-card .card-image {
-  flex: 0 0 58%;
-  aspect-ratio: auto; /* override previous 4/3 so height stays constant */
-  position: relative;
-}
-
-.spectacle-card .card-image img {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* Clamp text so varying lengths don't change card height */
-.spectacle-card .card-title {
+/* Keep photo ratio; text fits in remaining space */
+.team-member .member-photo {
   flex: 0 0 auto;
-  margin-top:.4rem;
 }
 
-.spectacle-card .card-description {
-  flex: 1 1 auto;
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:3; /* adjust if you want more lines */
-  overflow:hidden;
-  margin-top:.3rem;
-}
-
-/* Optional: subtle fade for truncated text */
-.spectacle-card .card-description {
-  position:relative;
-}
-
-.spectacle-card .card-description::after {
-  content:"";
-  position:absolute;
-  inset:auto 0 0 0;
-  height:1.4rem;
-  background:linear-gradient(to bottom,rgba(255,255,255,0), #fff);
-  pointer-events:none;
-}
-
-/* === Uniformisation cartes spectacles (override final) === */
-.spectacles-grid {
-  display:flex;
-  flex-wrap:wrap;
-  gap:1.5rem;
-  justify-content:center;
-}
-
-.spectacle-card {
-  width:clamp(240px, 26vw, 300px);
-  height:420px;
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-}
-
-@media (max-width:640px){
-  .spectacle-card {
-    width:calc(50% - 0.9rem);
-    max-width:260px;
-    height:360px;
-  }
-}
-
-@media (max-width:460px){
-  .spectacle-card {
-    width:100%;
-    height:360px;
-  }
-}
-
-.spectacle-card .card-image {
-  flex:0 0 60%;
-  height:60%;          /* sécurité si flex ignoré */
-  aspect-ratio:auto !important;
-  position:relative;
-  overflow:hidden;
-  margin:0 0 .55rem 0 !important;
-  border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.spectacle-card .card-image img {
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-  transform:none !important;
-}
-
-.spectacle-card .card-title {
-  margin:.25rem 0 0;
-  font-size:1rem;
-}
-
-.spectacle-card .card-description {
-  margin:.35rem 0 0;
-  font-size:.8rem;
-  line-height:1.3;
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-line-clamp:4;
-  overflow:hidden;
-  position:relative;
-}
-
-.spectacle-card .card-description::after {
-  content:"";
-  position:absolute;
-  right:0; bottom:0; left:0;
-  height:1.2rem;
-  background:linear-gradient(to bottom,rgba(255,255,255,0), #fff);
-  pointer-events:none;
-}
-
-/* Effet hover léger sans changer la taille */
-.spectacle-card:hover {
-  transform:translateY(-4px);
-}
-
-.spectacle-card:hover .card-image img {
-  transform:scale(1.05);
-  transition:transform .6s ease;
-}
-
-/* === Souffle: media & resources sections === */
-.spectacle-media,
-.spectacle-resources {
-  margin-top:clamp(2.4rem,4.2vw,3.4rem);
-  background:linear-gradient(135deg,#fbfaf8,#f2ece5);
-  border:1px solid #e7dfd5;
-  border-radius:var(--radius-lg);
-  padding:clamp(1.4rem,2vw,2rem) clamp(1.2rem,2.4vw,2.2rem);
-  box-shadow:var(--shadow-sm);
-  position:relative;
-  overflow:hidden;
-}
-
-.spectacle-media::before,
-.spectacle-resources::before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 18% 22%,rgba(212,165,116,.15),transparent 60%),
-    radial-gradient(circle at 82% 78%,rgba(44,24,16,.08),transparent 65%);
-  pointer-events:none;
-  mix-blend-mode:overlay;
-}
-
-.spectacle-media h2,
-.spectacle-resources h2 {
-  margin:0 0 .9rem;
-  font-family:var(--font-display);
-  font-size:1.85rem;
-  color:var(--color-primary);
-}
-
-.media-intro,
-.resources-intro {
-  margin:0 0 1.1rem;
-  font-size:.95rem;
-  color:var(--color-text-light);
-}
-
-.video-wrapper {
-  position:relative;
-  border-radius:18px;
-  overflow:hidden;
-  background:#000;
-  aspect-ratio:16/9;
-  box-shadow:0 8px 26px -8px rgba(0,0,0,.25);
-}
-
-.video-wrapper video {
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-}
-
-.media-caption {
-  margin:.75rem 0 0;
-  font-size:.7rem;
-  letter-spacing:.6px;
-  text-transform:uppercase;
-  color:#7a6049;
-  font-weight:600;
-}
-
-.spectacle-resources .download-list {
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-wrap:wrap;
-  gap:.9rem;
-}
-
-.download-link {
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-  background:var(--color-primary);
-  color:#fff;
-  padding:.75rem 1.05rem;
-  font-size:.8rem;
-  letter-spacing:.6px;
-  text-transform:uppercase;
-  font-weight:600;
-  border-radius:var(--radius-sm);
-  position:relative;
-  overflow:hidden;
-  transition:var(--transition);
-  text-decoration:none;
-}
-
-.download-link::before {
-  content:"⬇";
-  font-size:.9rem;
-  transform:translateY(-1px);
-}
-
-.download-link:hover {
-  background:var(--color-accent);
-  transform:translateY(-2px);
-  box-shadow:0 6px 20px -6px rgba(230,57,70,.4);
-}
-
-@media (max-width:640px){
-  .spectacle-media h2,
-  .spectacle-resources h2 { font-size:1.55rem; }
-  .video-wrapper { aspect-ratio:16/9; }
-}
-
-/* === Stylised Carousel (Spectacle gallery) === */
-.carousel {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  background: #f4f4f4;
-  border-radius: var(--radius);
+/* Clamp texts to avoid overflow inside fixed height */
+.team-member .member-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
-
-.carousel-track {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transform: translateX(0%);
-  transition: transform .55s cubic-bezier(.4,.18,.2,1);
-}
-
-.carousel-slide {
-  position: relative;
-  min-width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(45deg,#f2eee9,#f2eee9 8px,#ece7e1 8px,#ece7e1 16px);
-  display: grid;
-  place-items: center;
-  color: #8a6a40;
-  font-weight: 500;
-}
-
-.carousel-slide.img-error::before {
-  content: "Image indisponible";
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.6);
-  background: rgba(0,0,0,.35);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  z-index: 2;
-  transition: background .25s ease, transform .2s ease;
-  backdrop-filter: blur(4px);
-}
-.carousel-btn:hover { background: rgba(0,0,0,.5); transform: translateY(-50%) scale(1.04); }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-
-.carousel-dots {
-  position: absolute;
-  left: 0; right: 0; bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: .45rem;
-  z-index: 2;
-  padding: 0 .5rem;
-}
-
-.carousel-dots button {
-  width: 10px; height: 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.9);
-  background: rgba(0,0,0,.25);
-  padding: 0;
-  cursor: pointer;
-  transition: transform .2s ease, background .2s ease, width .2s ease;
-}
-.carousel-dots button[aria-selected="true"] {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  transform: scale(1.1);
-  width: 18px;
-}
-
-@media (max-width: 560px){
-  .carousel { aspect-ratio: 16 / 10; }
-  .carousel-btn { width: 36px; height: 36px; }
-}
-
-/* === Indika: taille de la carte "L'artiste" (ne plus s'étirer en pleine largeur) === */
-body[data-page="indika"] .team-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
-  justify-content: center;
-}
-
-body[data-page="indika"] .team-member {
-  max-width: 300px;
-  margin-inline: auto;
-}
-
-@media (max-width: 560px) {
-  body[data-page="indika"] .team-member {
-    max-width: 100%;
-  }
+.team-member .member-role,
+.team-member .member-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
